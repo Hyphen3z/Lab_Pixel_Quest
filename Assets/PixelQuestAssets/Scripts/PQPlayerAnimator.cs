@@ -19,8 +19,14 @@ public class PQPlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.E)){
+            animator.Play("Attack");
+        }
+
+
         // Checks if player is standing still if so make play Idle animation 
-        if(rigidbody2D.velocity.x == 0)
+        if (rigidbody2D.velocity.x == 0)
         {
             animator.SetBool(animParam, false);
         }
